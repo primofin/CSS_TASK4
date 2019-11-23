@@ -73,4 +73,4 @@ https://www.w3schools.com/cssref/sel_attribute_value.asp
 -> Strawberry
 ```
 If you are done, you should see something like this:<br>
-css_task4.png
+https://github.com/vynmetropolia/CSS_TASK4/blob/master/css_task4.png
