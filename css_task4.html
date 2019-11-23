@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS TASK 4</title>
+</head>
+<body>
+        <ul class="fruits">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li data-foodtype="squishy">Orange</li>
+                <li>Pear</li>
+                <li>Kiwi</li>
+                <li id="berry">Strawberry</li>
+            </ul>
+
+    <script>
+        'use strict';
+        //1
+        const berry= document.getElementById("berry");
+        berry.style.backgroundColor = "red";
+        console.log(berry);
+        console.log("I found the berry: " + berry.firstChild.nodeValue);
+        
+
+        //2
+        const oragne =  document.querySelector("[data-foodtype='squishy']");
+        oragne.style.backgroundColor= "orange";
+        console.log(oragne);
+        console.log("I found the fruit: " + oragne.firstChild.nodeValue);
+
+        //3.1
+        let li_collection = document.getElementsByTagName("li");
+        const length = li_collection.length;
+        console.log(li_collection);
+        
+      
+        //3.2
+        console.log('Using the for loop here: ');
+    
+         for (let i = 0; i < length; i++) {
+            //change the background color of the list element containing "Pear" to green
+            if(li_collection[i].firstChild.nodeValue == "Pear"){
+                li_collection[i].style.backgroundColor = "green";
+            };
+            console.log(li_collection[i].firstChild.nodeValue);
+            li_collection[i].style.width="100px";
+            li_collection[i].style.listStyleType="none";
+         };
+         
+
+        //4.1
+
+        const nodelist = document.querySelectorAll("li");
+        console.log(nodelist);
+
+        //4.2
+        console.log("Using forEach here: ");
+        nodelist.forEach(element => {
+            console.log( element.firstChild.nodeValue);
+            element.style.border="solid black";
+            
+         });
+        
+        
+      
+
+
+    </script>
+</body>
+</html>
